@@ -88,7 +88,7 @@ rtPublishBuildInfo (
  }
  
  } catch (err) {
-     emailext body: "<b>Devops Assignment</b><br>\n <br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL build: ${env.BUILD_URL} <br> ${err}", cc: '', charset: 'UTF-8', from: 'jenkins@mindtree.com', mimeType: 'text/html', replyTo: '', subject: "Pipeline ERROR CI: Project name -> ${env.JOB_NAME}", to: "pal.rashmi@gmail.com"
+     emailext body: "<b>Devops Assignment</b><br>\n <br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL build: ${env.BUILD_URL} <br> ${err}", cc: '', charset: 'UTF-8', from: 'jenkins@mindtree.com', mimeType: 'text/html', replyTo: '', subject: "Pipeline ERROR CI: Project name -> ${env.JOB_NAME}", to: "yathishkumar1269@gmail.com"
 }
 }
 
