@@ -1,7 +1,7 @@
 node {
  try {
  
- emailext body: 'Devops-301', subject: 'Pipeline Job started', to: 'yathishkumar1269@gmail.com'
+ emailext body: 'Devops-301_Casestudy', subject: 'Pipeline Job started', to: 'yathishkumar1269@gmail.com'
  
  stage('Git CheckOut') {
     git branch: 'main', url: 'https://github.com/yathish1269/Devops-301.git'
