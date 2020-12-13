@@ -1,6 +1,8 @@
 node {
- 
-  
+ try {
+
+ emailext body: 'Devops-301', subject: 'Pipeline Job started', to: 'yathishkumar1269@gmail.com'
+	 
 	 stage('Git CheckOut') {
     git branch: 'main', url: 'https://github.com/yathish1269/Devops-301.git'
  }
@@ -83,8 +85,11 @@ rtPublishBuildInfo (
  stage('Ansible Deployment') {
     sh 'ansible-playbook webserver.yaml'
  }
+ }catch (err) {
+emailext body: "<b>Devops Assignment</b><br>\n <br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL build: ${env.BUILD_URL} <br> ${err}", cc: '', charset: 'UTF-8', from: 'jenkins@mindtree.com', mimeType: 'text/html', replyTo: '', subject: "Pipeline ERROR CI: Project name -> ${env.JOB_NAME}", to: "yathishkumar1269@gmail.com"
  }
  
-     
+ 
+ }
 }
 
